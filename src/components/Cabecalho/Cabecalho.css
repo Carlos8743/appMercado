@@ -1,0 +1,76 @@
+@import url("../../global.module.css");
+
+.Cabecalho {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-direction: row;
+  padding: 20px 20px;
+  font-family: var(--fonte-primaria);
+  background: var(--cor-verde);
+  color: var(--cor-branca);
+}
+.Cabecalho .Logo {
+  width: 50px;
+  border-radius: 20px;
+}
+.Cabecalho .Barra_De_Pesquisa {
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  background: var(--cor-branca);
+  display: flex;
+}
+.Cabecalho .Barra_De_Pesquisa input {
+  width: 80%;
+  border-radius: 20px;
+  border: none;
+  padding: 0px 0px 0px 20px;
+}
+.Cabecalho .Barra_De_Pesquisa .Lupa {
+  padding: 8px;
+  width: 20%;
+  border-radius: 0px 20px 20px 0px;
+  background: var(--cor-branca);
+  color: #000;
+}
+.Cabecalho .Barra_De_Pesquisa .Lupa:hover {
+  color: var(--cor-branca);
+  background: var(--cor-roxa);
+  cursor: pointer;
+}
+.Cabecalho .Barra_De_Pesquisa input:focus {
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+.Cabecalho .Barra_De_Pesquisa input::placeholder {
+  font-size: 16px;
+  font-family: moon;
+}
+.Cabecalho .Hamburger {
+  display: flex;
+  gap: 10px;
+}
+.Cabecalho .Hamburger_Links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  justify-content: center;
+  color: #000;
+  top: 11.5%;
+  right: 10%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--cor-roxa);
+}
+.Cabecalho .Hamburger_Links li {
+  border-bottom: 1px solid var(--cor-cinza);
+}
+@media (max-width: 400px) and (min-width: 0px) {
+  .Cabecalho .Hamburger_Links {
+    top: 8%;
+    right: 10%;
+  }
+}
