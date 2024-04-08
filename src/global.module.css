@@ -4,9 +4,16 @@
   --fonte-primaria: "Montserrat", sans-serif;
   --cor-branca: #fff;
   --cor-verde: #43ff4f;
-  --cor-blue: #4400ff;
+  --cor-azul: #4400ff;
+  --gradiente-blue: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(10, 64, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   --cor-roxa: #ee00ff;
   --cor-cinza: #a5a5a5;
+  --cor-cinzento: #303030;
 }
 html,
 body,

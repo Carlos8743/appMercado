@@ -1,1 +1,12 @@
+# Minha mensagem de commit customizada.
+/commit.text
+
+# Dependencias.
 /node_modules
+
+# Teste automatos.
+/test
+
+# Produção.
+/build
+
