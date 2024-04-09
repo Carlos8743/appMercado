@@ -23,11 +23,15 @@
   display: flex;
   align-self: baseline;
   text-align: left;
-  font-size: 24px;
-  border-bottom: 2px solid var(--cor-azul);
-  margin-bottom: 10px;
+  font-size: 28px;
+  border-bottom: 1px solid var(--cor-azul);
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .Menu_Principal .Produto {
   display: flex;
   flex-wrap: wrap;
+}
+.Tipo_Produto .Icone {
+  margin-left: 20px;
 }

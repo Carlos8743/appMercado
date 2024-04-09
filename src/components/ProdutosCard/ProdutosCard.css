@@ -3,7 +3,6 @@
   width: 400px;
   margin: 5px;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   gap: 20px;
   color: var(--cor-cinzento);
@@ -13,14 +12,15 @@
 }
 .CardProdutos .Produto_Img {
   margin: 0px;
+  width: 400px;
   padding: 0px;
-  width: 100%;
   transition: 1s;
   overflow: hidden;
 }
 .CardProdutos .Produto_Img .Img {
-  width: 100%;
-  height: 100%;
+  background-repeat: repeat;
+  width: 400px;
+  height: 250px;
   cursor: pointer;
 }
 .CardProdutos .Produto_Img .Img:hover {
@@ -30,8 +30,8 @@
 .CardProdutos .Produto_Texto {
   display: grid;
   padding: 10px;
+  justify-self: flex-start;
   align-items: center;
-  text-align: center;
   justify-items: center;
   gap: 20px;
   font-size: 20px;
@@ -47,6 +47,8 @@
 }
 .CardProdutos .Produto_Texto .Produto_Descricao {
   font-size: 16px;
+  margin-bottom: 2px;
+  width: 200px;
   font-weight: 400;
   grid-area: Descricao;
 }
@@ -63,4 +65,25 @@
   font-size: 20px;
   grid-area: Adds;
   cursor: pointer;
+}
+@media (max-width: 500px) and (min-width: 0px) {
+  .CardProdutos {
+    width: 80%;
+  }
+  .CardProdutos .Produto_Img {
+    width: 100%;
+    height: 200px;
+  }
+  .CardProdutos .Produto_Img .Img {
+    background-repeat: repeat;
+    width: 400px;
+    height: 80%;
+    cursor: pointer;
+  }
+  .CardProdutos .Produto_Texto .Produto_Nome {
+    font-size: 24px;
+  }
+  .CardProdutos .Produto_Texto .Produto_Descricao {
+    font-size: 14px;
+  }
 }

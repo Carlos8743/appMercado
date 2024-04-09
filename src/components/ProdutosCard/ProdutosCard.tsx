@@ -1,12 +1,13 @@
 import { BsCartPlus } from "react-icons/bs";
 import "./ProdutosCard.css";
+
 type ProdutoCard = {
   ImgProduto: string;
   NomeProduto: string;
   Descricao: string;
   Preco: string;
-  Classe: string;
 };
+
 export function ProdutosCards({
   ImgProduto,
   NomeProduto,
@@ -24,7 +25,7 @@ export function ProdutosCards({
       </div>
       <div className="Produto_Texto">
         <h1 className="Produto_Nome">{NomeProduto}</h1>
-        <p className="Produto_Descricao">{Descricao}</p>
+        <p className="Produto_Descricao">{Descricao.slice(0, 80)} ...</p>
         <h2 className="Preco">{Preco}</h2>
         <button className="Add">
           Add + <BsCartPlus />
