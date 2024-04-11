@@ -11,6 +11,7 @@ Este aplicativo web simula um Supermercado, mas atualmente possui apenas a parte
 - [ ] Adicionar compras ao carrinho
 - [ ] Uso de teste usando Cypress
 - [ ] Rotas com as paginas do Produtos
+- [x] Rotas caso a haja um erro ou simplesmente não existe
 
 ## 👋 Tecnologias Usadas
 
@@ -19,7 +20,11 @@ Este aplicativo web simula um Supermercado, mas atualmente possui apenas a parte
 ## 🖥️ Comandos para iniciar
 
 Inicia o projeto em um servidor local:
+
 ` npm run start`
+
 Cria a build do projeto para produção:
-`npm run start`
+
+`npm run build `
+
 Testes Ainda não disponíveis:

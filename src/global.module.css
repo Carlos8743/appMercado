@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap");
 :root {
   --fonte-primaria: "Montserrat", sans-serif;
+  --fonte-secundaria: "Tilt Neon", sans-serif;
+  --cor-roxa-forte: #b300ff;
   --cor-branca: #fff;
   --cor-verde: #43ff4f;
   --cor-azul: #4400ff;

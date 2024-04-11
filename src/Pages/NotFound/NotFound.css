@@ -1,0 +1,20 @@
+@import url("../../global.module.css");
+.NotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: var(--cor-roxa-forte);
+  color: var(--cor-branca);
+}
+.NotFound .Imagem {
+  width: 500px;
+  height: 500px;
+}
+.NotFound .Texto {
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+  font-size: 24px;
+  width: 200px;
+}
