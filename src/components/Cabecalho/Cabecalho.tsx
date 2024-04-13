@@ -4,19 +4,19 @@ import { BiSolidUserCircle } from "react-icons/bi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Cabecalho.css";
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
 import { Rodape } from "../Rodape/Rodape";
+import { CarrinhoDeCompras } from "../../components/CarrinhoDeCompras/CarrinhoDeCompras";
+import { NavegaBar } from "../../components/NavegaBar/NavegaBar";
+import { ComprasContext } from "../../Context/ComprasContext";
+import { useContext } from "react";
 export function Cabecalho() {
-  const [getVisivel, setVisivel] = useState("none");
-  function Visibilidade() {
-    if (getVisivel === "none") {
-      setVisivel("flex");
-      return;
-    }
-    setVisivel("none");
-  }
+  const { getVisivel, visibilidadeCompras, visibilidadeHamburgue } =
+    useContext(ComprasContext);
   return (
     <>
+      <NavegaBar>
+        <CarrinhoDeCompras />
+      </NavegaBar>
       <header className="Cabecalho">
         <img
           className="Logo"
@@ -28,20 +28,26 @@ export function Cabecalho() {
           <BsSearch className="Lupa" />
         </div>
         <div className="Hamburger">
-          <BsCartPlus size={30} />
+          <BsCartPlus
+            size={30}
+            onClick={() => {
+              visibilidadeCompras();
+            }}
+          />
           <BiSolidUserCircle size={30} />
           <RxHamburgerMenu
             size={30}
             onClick={() => {
-              Visibilidade();
+              visibilidadeHamburgue();
             }}
           />
-          <ul className="Hamburger_Links" style={{ display: getVisivel }}>
-            <li>Carnes</li>
-            <li>Hortfruit</li>
-            <li>Padaria</li>
-            <li>Vegetais</li>
-            <li>Eletrodomésticos</li>
+          <ul
+            className="Hamburger_Links"
+            style={{ display: getVisivel.hamburgue }}
+          >
+            <li>Açougue</li>
+            <li>Bebidas</li>
+            <li>Horta</li>
           </ul>
         </div>
       </header>

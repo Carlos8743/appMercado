@@ -1,0 +1,16 @@
+@import url("../../global.module.css");
+.BarraNavega {
+  flex-direction: column;
+  z-index: 10;
+  align-items: center;
+  border-radius: 25px;
+  padding: 0px 0px 20px 0px;
+  font-family: var(--fonte-primaria);
+  background-color: var(--cor-branca);
+  border: 1px solid var(--cor-roxa-forte);
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 200px;
+  text-align: center;
+}

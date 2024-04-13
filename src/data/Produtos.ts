@@ -113,10 +113,29 @@ const Produtos = [
   {
     id: nanoid(),
     nome: "Sabão",
+    classe: "Limpeza",
     descricao:
       "Produto de limpeza usado para remover a sujidade das mãos, roupas e outros objetos. Possui diversas formas e fragrâncias.",
     preco: "R$ 5.0",
     linkImg: "../assets/image10.jpg",
+  },
+  {
+    id: nanoid(),
+    nome: "Alcool",
+    classe: "Bebida",
+    descricao:
+      " Beba com moderação e evite o consumo excessivo de álcool. Cachaça a proiveitaO álcool é rico em calorias, contendo aproximadamente 7 calorias por grama.Uma dose de destilado (45ml) possui cerca de 90-100 calorias.Uma lata de cerveja (350ml) contém aproximadamente 150 calorias.Uma taça de vinho (150ml) possui cerca de 120 calorias.",
+    preco: "R$ 40.0",
+    linkImg: "../assets/image13.jpg",
+  },
+  {
+    id: nanoid(),
+    nome: "Shampo",
+    classe: "Limpeza",
+    descricao:
+      " Experimente o poder transformador do [Nome do Shampoo], um produto desenvolvido com todo o cuidado para nutrir, revitalizar e proteger seus cabelos, deixando-os irresistivelmente macios, brilhantes e saudáveis.",
+    preco: "R$ 13.50",
+    linkImg: "../assets/image14.jpg",
   },
 ];
 export default Produtos;

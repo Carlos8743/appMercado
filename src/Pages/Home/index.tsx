@@ -1,13 +1,12 @@
-import { useState } from "react";
 import { ProdutosCards } from "../../components/ProdutosCard/ProdutosCard";
 import { TbMeat } from "react-icons/tb";
 import { GiPlantSeed } from "react-icons/gi";
 import { FaGlassMartiniAlt } from "react-icons/fa";
+import { MdCleanHands } from "react-icons/md";
 import Produtos from "../../data/Produtos";
 import "./index.css";
 
 export function Home() {
-  const [Produto, setProduto] = useState(Produtos);
   return (
     <main className="Menu_Principal">
       <h1 className="Titulo">Produtos</h1>
@@ -16,7 +15,7 @@ export function Home() {
           Açougue <TbMeat className="Icone" />
         </h2>
         <div className="Produto">
-          {Produto.map((Prod): any => {
+          {Produtos.map((Prod): any => {
             return (
               Prod.classe === "Açougue" && (
                 <ProdutosCards
@@ -35,7 +34,7 @@ export function Home() {
           <FaGlassMartiniAlt className="Icone" />
         </h2>
         <div className="Produto">
-          {Produto.map((Prod): any => {
+          {Produtos.map((Prod): any => {
             return (
               Prod.classe === "Bebida" && (
                 <ProdutosCards
@@ -54,9 +53,28 @@ export function Home() {
           <GiPlantSeed className="Icone" />
         </h2>
         <div className="Produto">
-          {Produto.map((Prod): any => {
+          {Produtos.map((Prod): any => {
             return (
               Prod.classe === "Horta" && (
+                <ProdutosCards
+                  key={Prod.id}
+                  NomeProduto={Prod.nome}
+                  ImgProduto={Prod.linkImg}
+                  Descricao={Prod.descricao}
+                  Preco={Prod.preco}
+                />
+              )
+            );
+          })}
+        </div>
+        <h2 className="Tipo_Produto">
+          Produtos de Limpeza
+          <MdCleanHands className="Icone" />
+        </h2>
+        <div className="Produto">
+          {Produtos.map((Prod): any => {
+            return (
+              Prod.classe === "Limpeza" && (
                 <ProdutosCards
                   key={Prod.id}
                   NomeProduto={Prod.nome}

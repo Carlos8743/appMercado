@@ -53,6 +53,8 @@
   gap: 10px;
 }
 .Cabecalho .Hamburger_Links {
+  z-index: 15px;
+  background: var(--cor-branca);
   display: flex;
   flex-direction: column;
   gap: 20px;

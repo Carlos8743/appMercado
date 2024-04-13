@@ -1,0 +1,33 @@
+@import url("../../global.module.css");
+.BarraNavega .Titulo {
+  padding: 10px 0px 10px 0px;
+  font-size: 30px;
+  background: var(--cor-roxa-forte);
+  color: var(--cor-branca);
+  border-radius: 25px 25px 0px 0px;
+}
+.BarraNavega .ImgProduto {
+  width: 200px;
+}
+.BarraNavega .NomePorduto {
+  font-size: 24px;
+}
+.Layout_Quantidade {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.Layout_Quantidade .Quantidade {
+  font-size: 24px;
+}
+.Layout_Quantidade button {
+  background: var(--cor-azul);
+  text-align: center;
+  font-size: 20px;
+  border-radius: 12%;
+  border: none;
+  color: var(--cor-branca);
+  background: var(--cor-azul);
+}
