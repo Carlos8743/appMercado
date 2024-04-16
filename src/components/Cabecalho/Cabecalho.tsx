@@ -3,7 +3,7 @@ import { BsCartPlus } from "react-icons/bs";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Cabecalho.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { Rodape } from "../Rodape/Rodape";
 import { CarrinhoDeCompras } from "../../components/CarrinhoDeCompras/CarrinhoDeCompras";
 import { NavegaBar } from "../../components/NavegaBar/NavegaBar";
@@ -12,6 +12,7 @@ import { useContext } from "react";
 export function Cabecalho() {
   const { getVisivel, visibilidadeCompras, visibilidadeHamburgue } =
     useContext(ComprasContext);
+  const navigate = useNavigate();
   return (
     <>
       <NavegaBar>
@@ -19,6 +20,7 @@ export function Cabecalho() {
       </NavegaBar>
       <header className="Cabecalho">
         <img
+          onClick={() => navigate("/")}
           className="Logo"
           alt="Logo da empresa"
           src="../../assets/LogoMarca.png"

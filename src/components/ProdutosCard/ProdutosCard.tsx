@@ -1,7 +1,9 @@
 import { BsCartPlus } from "react-icons/bs";
 import "./ProdutosCard.css";
+import { Link } from "react-router-dom";
 
 type ProdutoCard = {
+  id: string;
   ImgProduto: string;
   NomeProduto: string;
   Descricao: string;
@@ -9,6 +11,7 @@ type ProdutoCard = {
 };
 
 export function ProdutosCards({
+  id,
   ImgProduto,
   NomeProduto,
   Descricao,
@@ -23,6 +26,7 @@ export function ProdutosCards({
           src={ImgProduto}
         />
       </div>
+      <Link to={`${"http:localhost:3000/Produto/" + id}`}>Produto</Link>
       <div className="Produto_Texto">
         <h1 className="Produto_Nome">{NomeProduto}</h1>
         <p className="Produto_Descricao">{Descricao.slice(0, 80)} ...</p>

@@ -20,6 +20,7 @@ export function Home() {
               Prod.classe === "Açougue" && (
                 <ProdutosCards
                   key={Prod.id}
+                  id={Prod.id}
                   NomeProduto={Prod.nome}
                   ImgProduto={Prod.linkImg}
                   Descricao={Prod.descricao}
@@ -39,6 +40,7 @@ export function Home() {
               Prod.classe === "Bebida" && (
                 <ProdutosCards
                   key={Prod.id}
+                  id={Prod.id}
                   NomeProduto={Prod.nome}
                   ImgProduto={Prod.linkImg}
                   Descricao={Prod.descricao}
@@ -58,6 +60,7 @@ export function Home() {
               Prod.classe === "Horta" && (
                 <ProdutosCards
                   key={Prod.id}
+                  id={Prod.id}
                   NomeProduto={Prod.nome}
                   ImgProduto={Prod.linkImg}
                   Descricao={Prod.descricao}
@@ -77,6 +80,7 @@ export function Home() {
               Prod.classe === "Limpeza" && (
                 <ProdutosCards
                   key={Prod.id}
+                  id={Prod.id}
                   NomeProduto={Prod.nome}
                   ImgProduto={Prod.linkImg}
                   Descricao={Prod.descricao}

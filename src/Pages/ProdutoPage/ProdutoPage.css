@@ -1,0 +1,46 @@
+@import url("../../global.module.css");
+.Produtos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid var(--cor-verde);
+  border-radius: 20px;
+  font-family: var(--fonte-primaria);
+  text-align: center;
+}
+.Produtos .ImagemProduto {
+  max-width: 400px;
+  border-radius: 20px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.Produtos .Produtos_Texto {
+  width: 50%;
+}
+.Produtos_Texto .Nome {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Produtos_Texto .descricao {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.Produtos_Texto .preco {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.Produtos_Texto .tabela {
+  font-size: 14px;
+  line-height: 1.6;
+}
