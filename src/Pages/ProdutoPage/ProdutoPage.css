@@ -12,6 +12,7 @@
   border-radius: 20px;
   font-family: var(--fonte-primaria);
   text-align: center;
+  height: 100vh;
 }
 .Produtos .ImagemProduto {
   max-width: 400px;

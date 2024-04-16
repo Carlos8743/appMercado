@@ -9,6 +9,7 @@
   background: var(--cor-branca);
   border: solid 1px var(--cor-cinza);
   box-shadow: 1px 1px 10px 0px;
+  padding: 0px 20px 0px 0px;
 }
 .CardProdutos .Produto_Img {
   margin: 0px;

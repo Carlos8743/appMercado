@@ -127,6 +127,8 @@ const Produtos = [
       " Beba com moderação e evite o consumo excessivo de álcool. Cachaça a proiveitaO álcool é rico em calorias, contendo aproximadamente 7 calorias por grama.Uma dose de destilado (45ml) possui cerca de 90-100 calorias.Uma lata de cerveja (350ml) contém aproximadamente 150 calorias.Uma taça de vinho (150ml) possui cerca de 120 calorias.",
     preco: "R$ 40.0",
     linkImg: "../assets/image13.jpg",
+    tabelaNutricional:
+      "Calorias	231 kcal	11,55% Carboidratos	0,0 g	0% Proteínas	0,0 g	0% Gorduras Totais	0,0 g	0% Gorduras Saturadas	0,0 g	0% Gorduras Trans	0,0 g	0% Sódio	0 mg	0% Potássio	2 mg	0,06% Cálcio	2 mg	0,02% Ferro	0 mg	0%",
   },
   {
     id: nanoid(),

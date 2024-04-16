@@ -1,6 +1,9 @@
 import { BsCartPlus } from "react-icons/bs";
 import "./ProdutosCard.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import ComprasContext from "../../Context/ComprasContext";
+import { ADICIONAR } from "../../Context/ComprasContext";
 
 type ProdutoCard = {
   id: string;
@@ -17,6 +20,7 @@ export function ProdutosCards({
   Descricao,
   Preco,
 }: ProdutoCard) {
+  const { dispatch } = useContext(ComprasContext);
   return (
     <section className="CardProdutos">
       <div className="Produto_Img">
@@ -31,7 +35,15 @@ export function ProdutosCards({
         <h1 className="Produto_Nome">{NomeProduto}</h1>
         <p className="Produto_Descricao">{Descricao.slice(0, 80)} ...</p>
         <h2 className="Preco">{Preco}</h2>
-        <button className="Add">
+        <button
+          className="Add"
+          onClick={() =>
+            dispatch({
+              type: ADICIONAR,
+              payload: { linkImg: ImgProduto, nome: NomeProduto },
+            })
+          }
+        >
           Add + <BsCartPlus />
         </button>
       </div>

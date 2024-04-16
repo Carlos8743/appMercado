@@ -8,9 +8,9 @@ Este aplicativo web simula um Supermercado, mas atualmente possui apenas a parte
 
 - [x] Pagina inicial do usuário
 - [x] Pagina inicial de produtos
-- [ ] Adicionar compras ao carrinho
+- [x] Adicionar compras ao carrinho
 - [ ] Uso de teste usando Cypress
-- [ ] Rotas com as paginas do Produtos
+- [x] Rotas com as paginas do Produtos
 - [x] Rotas caso a haja um erro ou simplesmente não existe
 
 ## 👋 Tecnologias Usadas

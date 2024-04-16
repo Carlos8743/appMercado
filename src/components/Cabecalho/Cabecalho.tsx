@@ -10,13 +10,29 @@ import { NavegaBar } from "../../components/NavegaBar/NavegaBar";
 import { ComprasContext } from "../../Context/ComprasContext";
 import { useContext } from "react";
 export function Cabecalho() {
-  const { getVisivel, visibilidadeCompras, visibilidadeHamburgue } =
-    useContext(ComprasContext);
+  const {
+    getVisivel,
+    visibilidadeCompras,
+    visibilidadeHamburgue,
+    state,
+    dispatch,
+  } = useContext(ComprasContext);
   const navigate = useNavigate();
   return (
     <>
       <NavegaBar>
-        <CarrinhoDeCompras />
+        {state.length > 0 ? (
+          state.map((states, index) => (
+            <CarrinhoDeCompras
+              key={index}
+              index={index}
+              state={states}
+              dispatch={dispatch}
+            />
+          ))
+        ) : (
+          <h1> Carrinho sem Compras</h1>
+        )}
       </NavegaBar>
       <header className="Cabecalho">
         <img
