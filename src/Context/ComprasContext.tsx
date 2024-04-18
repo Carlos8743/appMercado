@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useState } from "react";
+import React, { createContext, useReducer } from "react";
 
 type Produto = {
   quantidade: number;
@@ -7,13 +7,6 @@ type Produto = {
 };
 
 type ComprasContextValue = {
-  getVisivel: {
-    hamburgue: string;
-    compras: string;
-  };
-  setVisivel: (newState: { hamburgue: string; compras: string }) => void;
-  visibilidadeHamburgue: () => void;
-  visibilidadeCompras: () => void;
   state: Produto[];
   dispatch: React.Dispatch<Action>;
 };
@@ -21,10 +14,6 @@ type ComprasContextValue = {
 type Action = { type: string; payload?: number | any };
 
 export const ComprasContext = createContext<ComprasContextValue>({
-  getVisivel: { hamburgue: "none", compras: "none" },
-  setVisivel: (newState: { hamburgue: string; compras: string }) => {},
-  visibilidadeHamburgue: () => {},
-  visibilidadeCompras: () => {},
   state: [],
   dispatch: (action: { type: string }) => {},
 });
@@ -34,39 +23,7 @@ export const DIMINUIR = "diminuir";
 export const ADICIONAR = "adicionar";
 
 export const ComprasProvider = ({ children }: any) => {
-  const [getVisivel, setVisivel] = useState({
-    hamburgue: "none",
-    compras: "none",
-  });
-
-  function visibilidadeHamburgue() {
-    setVisivel((prevState) => ({
-      ...prevState,
-      hamburgue: prevState.hamburgue === "none" ? "flex" : "none",
-    }));
-  }
-
-  function visibilidadeCompras() {
-    setVisivel((prevState) => ({
-      ...prevState,
-      compras: prevState.compras === "none" ? "flex" : "none",
-    }));
-  }
-
-  const inicial: Produto[] = [
-    {
-      quantidade: 2,
-      nome: "Bebidas",
-      linkImg: "../../assets/Image2.jpg",
-    },
-    {
-      quantidade: 1,
-      nome: "Alimentos",
-      linkImg: "../../assets/Image3.jpg",
-    },
-    // Adicione mais produtos conforme necessário
-  ];
-
+  const inicial: Produto[] = [];
   function reducerCompras(state: Produto[], action: Action): Produto[] {
     switch (action.type) {
       case INCREMENTAR:
@@ -102,10 +59,6 @@ export const ComprasProvider = ({ children }: any) => {
   return (
     <ComprasContext.Provider
       value={{
-        getVisivel,
-        setVisivel,
-        visibilidadeHamburgue,
-        visibilidadeCompras,
         state,
         dispatch,
       }}

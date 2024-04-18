@@ -3,7 +3,6 @@
 .Cabecalho {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
   flex-direction: row;
   padding: 20px 20px;
   font-family: var(--fonte-primaria);
@@ -11,7 +10,7 @@
   color: var(--cor-branca);
 }
 .Cabecalho .Logo {
-  width: 50px;
+  width: 70px;
   border-radius: 20px;
 }
 .Cabecalho .Barra_De_Pesquisa {
@@ -30,6 +29,7 @@
 .Cabecalho .Barra_De_Pesquisa .Lupa {
   padding: 8px;
   width: 20%;
+  height: 70%;
   border-radius: 0px 20px 20px 0px;
   background: var(--cor-branca);
   color: #000;
@@ -51,6 +51,14 @@
 .Cabecalho .Hamburger {
   display: flex;
   gap: 10px;
+}
+.Hamburger .icone {
+  cursor: pointer;
+  padding: 10px;
+}
+.Hamburger .icone:hover {
+  background: var(--cor-roxa);
+  border-radius: 10px;
 }
 .Cabecalho .Hamburger_Links {
   z-index: 15px;

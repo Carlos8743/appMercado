@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./Pages/Home";
 import { NotFound } from "./Pages/NotFound/NotFound";
 import { ComprasProvider } from "./Context/ComprasContext";
+import { VisivelCompraProvider } from "./Context/VisibilidadeCompras"; // Importe visivelCompraProvider em vez de VisivelCompraContext
 import { ProdutoPage } from "./Pages/ProdutoPage/ProdutoPage";
+
 export function App() {
   return (
     <>
@@ -14,7 +16,9 @@ export function App() {
             path="/"
             element={
               <ComprasProvider>
-                <Cabecalho />
+                <VisivelCompraProvider>
+                  <Cabecalho />
+                </VisivelCompraProvider>
               </ComprasProvider>
             }
           >

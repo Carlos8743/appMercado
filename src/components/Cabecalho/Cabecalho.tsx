@@ -9,14 +9,11 @@ import { CarrinhoDeCompras } from "../../components/CarrinhoDeCompras/CarrinhoDe
 import { NavegaBar } from "../../components/NavegaBar/NavegaBar";
 import { ComprasContext } from "../../Context/ComprasContext";
 import { useContext } from "react";
+import { VisivelCompraContext } from "../../Context/VisibilidadeCompras";
 export function Cabecalho() {
-  const {
-    getVisivel,
-    visibilidadeCompras,
-    visibilidadeHamburgue,
-    state,
-    dispatch,
-  } = useContext(ComprasContext);
+  const { state, dispatch } = useContext(ComprasContext);
+  const { getVisivel, visibilidadeCompras, visibilidadeHamburgue } =
+    useContext(VisivelCompraContext);
   const navigate = useNavigate();
   return (
     <>
@@ -31,7 +28,7 @@ export function Cabecalho() {
             />
           ))
         ) : (
-          <h1> Carrinho sem Compras</h1>
+          <h1 className="carrinho"> Carrinho sem Compras</h1>
         )}
       </NavegaBar>
       <header className="Cabecalho">
@@ -47,13 +44,15 @@ export function Cabecalho() {
         </div>
         <div className="Hamburger">
           <BsCartPlus
+            className="icone"
             size={30}
             onClick={() => {
               visibilidadeCompras();
             }}
           />
-          <BiSolidUserCircle size={30} />
+          <BiSolidUserCircle className="icone" size={30} />
           <RxHamburgerMenu
+            className="icone"
             size={30}
             onClick={() => {
               visibilidadeHamburgue();
@@ -66,6 +65,7 @@ export function Cabecalho() {
             <li>Açougue</li>
             <li>Bebidas</li>
             <li>Horta</li>
+            <li>Limpeza</li>
           </ul>
         </div>
       </header>

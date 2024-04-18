@@ -9,7 +9,6 @@
   background: var(--cor-branca);
   border: solid 1px var(--cor-cinza);
   box-shadow: 1px 1px 10px 0px;
-  padding: 0px 20px 0px 0px;
 }
 .CardProdutos .Produto_Img {
   margin: 0px;
@@ -17,6 +16,16 @@
   padding: 0px;
   transition: 1s;
   overflow: hidden;
+  position: relative;
+}
+.CardProdutos .Produto_Img:hover {
+  cursor: pointer;
+}
+.CardProdutos .Produto_Img .informacao {
+  position: absolute;
+  color: var(--cor-branca);
+  right: 10px;
+  top: 10px;
 }
 .CardProdutos .Produto_Img .Img {
   background-repeat: repeat;

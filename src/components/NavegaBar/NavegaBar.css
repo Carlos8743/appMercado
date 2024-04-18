@@ -15,9 +15,12 @@
   text-align: center;
 }
 .BarraNavega .Titulo {
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 0px 0px;
   font-size: 30px;
   background: var(--cor-roxa-forte);
   color: var(--cor-branca);
   border-radius: 25px 25px 0px 0px;
+}
+.BarraNavega .carrinho {
+  margin-top: 20px;
 }

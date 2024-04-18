@@ -4,7 +4,7 @@ export function NotFound() {
     <section className="NotFound">
       <img
         className="Imagem"
-        src="../assets/NotFoundImage.svg"
+        src="../../assets/NotFoundImage.svg"
         alt="Imagem de Pagina Não Encontrada"
       />
       <p className="Texto">
