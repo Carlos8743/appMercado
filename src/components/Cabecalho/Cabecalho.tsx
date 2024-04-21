@@ -8,13 +8,16 @@ import { Rodape } from "../Rodape/Rodape";
 import { CarrinhoDeCompras } from "../../components/CarrinhoDeCompras/CarrinhoDeCompras";
 import { NavegaBar } from "../../components/NavegaBar/NavegaBar";
 import { ComprasContext } from "../../Context/ComprasContext";
-import { useContext } from "react";
+import { ChangeEvent, useContext } from "react";
 import { VisivelCompraContext } from "../../Context/VisibilidadeCompras";
 export function Cabecalho() {
-  const { state, dispatch } = useContext(ComprasContext);
-  const { getVisivel, visibilidadeCompras, visibilidadeHamburgue } =
+  const { state, dispatch , pesquisa, setPesquisa} = useContext(ComprasContext);
+  const { getVisivel, visibilidadeCompras, visibilidadeHamburgue} =
     useContext(VisivelCompraContext);
   const navigate = useNavigate();
+  function PesquisaBarra(event: ChangeEvent<HTMLInputElement>): void {
+    setPesquisa(event.target.value);
+  }
   return (
     <>
       <NavegaBar>
@@ -39,8 +42,8 @@ export function Cabecalho() {
           src="../../assets/LogoMarca.png"
         />
         <div className="Barra_De_Pesquisa">
-          <input type="text" placeholder="Nome Do Produto" />
-          <BsSearch className="Lupa" />
+          <input type="text" placeholder="Nome Do Produto" onChange={PesquisaBarra}/>
+          <BsSearch className="Lupa" size={15}/>
         </div>
         <div className="Hamburger">
           <BsCartPlus

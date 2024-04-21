@@ -112,7 +112,7 @@ const Produtos = [
   },
   {
     id: nanoid(),
-    nome: "Sabão",
+    nome: "Sabonete",
     classe: "Limpeza",
     descricao:
       "Produto de limpeza usado para remover a sujidade das mãos, roupas e outros objetos. Possui diversas formas e fragrâncias.",
@@ -121,7 +121,7 @@ const Produtos = [
   },
   {
     id: nanoid(),
-    nome: "Alcool",
+    nome: "Vodka",
     classe: "Bebida",
     descricao:
       " Beba com moderação e evite o consumo excessivo de álcool. Cachaça a proiveitaO álcool é rico em calorias, contendo aproximadamente 7 calorias por grama.Uma dose de destilado (45ml) possui cerca de 90-100 calorias.Uma lata de cerveja (350ml) contém aproximadamente 150 calorias.Uma taça de vinho (150ml) possui cerca de 120 calorias.",

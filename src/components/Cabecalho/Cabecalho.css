@@ -21,15 +21,14 @@
   display: flex;
 }
 .Cabecalho .Barra_De_Pesquisa input {
-  width: 80%;
   border-radius: 20px;
   border: none;
   padding: 0px 0px 0px 20px;
 }
 .Cabecalho .Barra_De_Pesquisa .Lupa {
   padding: 8px;
-  width: 20%;
-  height: 70%;
+  width: 70%;
+  height: 67%;
   border-radius: 0px 20px 20px 0px;
   background: var(--cor-branca);
   color: #000;
