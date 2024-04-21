@@ -9,3 +9,5 @@
 
 # Produção.
 /build
+# Imagens duplicadas
+/src/assets

@@ -1,5 +1,6 @@
 import "./CarrinhoDeCompras.css";
 import { INCREMENTAR, DIMINUIR } from "../../Context/ComprasContext";
+import ImageCacheExample from "../ImagesLinks/ImagesLinks";
 type Props = {
   state: { quantidade: number; nome: string; linkImg: string };
   dispatch: any;
@@ -8,7 +9,11 @@ type Props = {
 export function CarrinhoDeCompras({ index, state, dispatch }: Props) {
   return (
     <>
-      <img className="ImgProduto" src={state.linkImg} alt={state.nome} />
+      <ImageCacheExample
+        estilo="ImgProduto"
+        src={state.linkImg}
+        alt={state.nome}
+      />
       <h1 className="NomePorduto"> {state.nome}</h1>
       <section className="Layout_Quantidade">
         <button onClick={() => dispatch({ type: DIMINUIR, payload: index })}>

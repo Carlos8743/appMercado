@@ -5,6 +5,7 @@ import ComprasContext from "../../Context/ComprasContext";
 import { ADICIONAR } from "../../Context/ComprasContext";
 import { useNavigate } from "react-router-dom";
 import { GrCircleInformation } from "react-icons/gr";
+import ImageCacheExample from "../ImagesLinks/ImagesLinks";
 
 type ProdutoCard = {
   id: string;
@@ -26,8 +27,8 @@ export function ProdutosCards({
   return (
     <section className="CardProdutos">
       <div className="Produto_Img">
-        <img
-          className="Img"
+        <ImageCacheExample
+          estilo="Img"
           alt={`${"imagem do Produto: "}${ImgProduto}`}
           src={ImgProduto}
         />
